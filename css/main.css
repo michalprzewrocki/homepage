@@ -9,7 +9,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 html,
 button,
 input,
@@ -98,19 +98,36 @@ textarea {
    ========================================================================== */
 
 
+#loader-big{position:fixed; height:100%; width:100%;  background: url('../img/background.jpg') no-repeat; background-size:cover; background-position:center; background-color: #F9F7D8;}
+
+#loader-big-content{position:relative; margin:0 auto; width:500px; height:250px;
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Chrome10+,Safari5.1+ */
 
 
+}
+	#loader-big-spinners{float:left; position:absolute; width:250px; height:250px;margin-left:125px;}
+	#loader-big-text{float:left; position:relative; line-height: 250px; margin:0 auto; text-align:center; width:500px;font-size:3.2em;font-family: 'Lobster', cursive;}
 
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.big-spinner{width:250px; height:250px;position:absolute; top:0; left:0;}
+#spinner-1{-webkit-animation: rotation-forward 9s infinite linear; -webkit-animation-delay: -1.3s; background:url('../img/spin-1.png');}
+#spinner-2{-webkit-animation: rotation-forward 7.2s infinite linear; background:url('../img/spin-2.png');}
+#spinner-3{-webkit-animation: rotation-backward 4.2s infinite linear; background:url('../img/spin-1.png');}
+#spinner-4{-webkit-animation: rotation-backward 4.2s infinite linear; background:url('../img/spin-3.png');}
+#spinner-5{-webkit-animation: rotation-backward 3.8s infinite linear;  -webkit-animation-delay: -1.9s;  background:url('../img/spin-3.png');}
 
-
-
-
-
-
-
-
-
+#spinner-1-b{-webkit-animation: rotation-forward 9s infinite linear; -webkit-animation-delay: -1.3s; background:url('../img/spin-1-b.png');}
+#spinner-2-b{-webkit-animation: rotation-forward 7.2s infinite linear; background:url('../img/spin-2-b.png');}
+#spinner-3-b{-webkit-animation: rotation-backward 4.2s infinite linear; background:url('../img/spin-1-b.png');}
+#spinner-4-b{-webkit-animation: rotation-backward 4.2s infinite linear; background:url('../img/spin-3-b.png');}
+#spinner-5-b{-webkit-animation: rotation-backward 3.8s infinite linear;  -webkit-animation-delay: -1.9s;  background:url('../img/spin-3-b.png');}
 
 
 /* ==========================================================================
